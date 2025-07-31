@@ -25,3 +25,19 @@ python train.py --epochs 50 --batch_size 16
 <img width="654" height="360" alt="image" src="https://github.com/user-attachments/assets/ec23956f-4732-423a-aa63-a7382a31f9cb" />
 
 ## 🧪 Thử nghiệm
+```bash
+# nếu ảnh chưa xử lý đen trắng
+python test.py --image_path [image_path]
+```
+```bash
+# nếu ảnh đã xử lý đen trắng
+python test.py --i --image_path [image_path]
+```
+### Thử nghiệm với ảnh 1
+![test1](https://github.com/user-attachments/assets/7c4ef906-a92a-467d-a02e-a2381e0921b5) 
+### Kết quả
+<img width="701" height="203" alt="image" src="https://github.com/user-attachments/assets/98f4b7ae-18f1-4cff-ad25-fb6097123d67" />
+### Thử nghiệm với ảnh 2
+![test2](https://github.com/user-attachments/assets/834fd0bb-9dd2-44dd-a046-dac069719573)
+### Kết quả
+<img width="574" height="236" alt="image" src="https://github.com/user-attachments/assets/dc30e679-72d3-4dd4-b7e1-f20f649e4117" />
