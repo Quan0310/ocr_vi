@@ -1,2 +1,3 @@
-data/lines/*
+data/lines/*.png
+data/lines/*.txt
 test_image/*
