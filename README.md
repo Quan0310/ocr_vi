@@ -10,6 +10,9 @@ Dự án này nhằm xây dựng một hệ thống nhận dạng chữ viết t
 - Tích hợp CRNN (Convolutional Recurrent Neural Network)
 - Tự động tiền xử lý ảnh viết tay (crop, resize, padding,...)
 
+## Dataset
+- Tập dữ liệu được tải ở đường link [ở đây](https://drive.google.com/file/d/1-hAGX91o45NA4nv1XUYw5pMw4jMmhsh5/view)
+
 ## 🔧 Cài đặt
 
 ```bash
