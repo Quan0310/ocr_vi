@@ -1,4 +1,5 @@
 import torch
+import cv2
 def custom_collate_fn(batch):
     # batch = list of (img, label, label_len, text)
     imgs, labels, label_lens, texts = zip(*batch)
@@ -33,3 +34,16 @@ def ctc_decode(preds, idx_to_char):
             decoded.append(p)
         prev = p
     return ''.join([idx_to_char[i] for i in decoded])
+
+def binarize_image(image):
+    gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+
+    alpha = 1.5  # Độ tương phản (1.0-3.0)
+    beta = 50    # Độ sáng (0-100)
+    adjusted = cv2.convertScaleAbs(gray, alpha=alpha, beta=beta)
+
+    _, binary = cv2.threshold(adjusted, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
+
+    denoised = cv2.GaussianBlur(binary, (3, 3), 0)
+    color_denoised = cv2.cvtColor(denoised, cv2.COLOR_GRAY2BGR)
+    return color_denoised

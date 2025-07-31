@@ -19,6 +19,7 @@ def main():
     parser.add_argument("--vocab_path", type=str, default="data/vietnamese_chars.txt")
     parser.add_argument("--img_w", type=int, default=1200)
     parser.add_argument("--img_h", type=int, default=64)
+    parser.add_argument("--i", action="store_true", help="Indicate if the image has white text on black background" )
     args = parser.parse_args()
 
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -33,9 +34,12 @@ def main():
 
     # Preprocess image
     image = cv.imread(args.image_path)
+    if not args.i:
+        image = binarize_image(image)
     image = preprocess(image, args.img_w, args.img_h)
     image = image.unsqueeze(0)
     image = image.to(device)
+    
     # Predict
     with torch.no_grad():
         output = model(image)  # [B, T, C]
@@ -45,6 +49,10 @@ def main():
         # Decode
         predicted_text = ctc_decode(log_probs.permute(1, 0, 2), idx_to_char)
         print("📝 Predicted Text:", predicted_text)
-
+        
+        plt.imshow(image[0][0].cpu().numpy(), cmap='gray')  # image: [1, 1, H, W] => [H, W]
+        plt.title(predicted_text)
+        plt.axis('off')
+        plt.show()
 if __name__ == "__main__":
     main()

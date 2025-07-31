@@ -3,7 +3,7 @@ import numpy as np
 import os
 
 # Đọc ảnh
-image_path = "tsjpg.jpg"  # Thay bằng đường dẫn đến ảnh của bạn
+image_path = "test1.jpg"  # Thay bằng đường dẫn đến ảnh của bạn
 image = cv2.imread(image_path)
 
 # Chuyển sang ảnh xám
@@ -21,7 +21,7 @@ _, binary = cv2.threshold(adjusted, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
 denoised = cv2.GaussianBlur(binary, (3, 3), 0)
 
 # Lưu ảnh đã xử lý thành PNG
-output_image_path = "vn.png"
+output_image_path = "3s3s33.png"
 cv2.imwrite(output_image_path, denoised)
 
 print(f"Đã lưu ảnh xử lý: {output_image_path}")
