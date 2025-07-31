@@ -20,7 +20,7 @@ Dự án này nhằm xây dựng một hệ thống nhận dạng chữ viết t
   │   ├── 13656456.png  
   │   ├── 13656456.txt
   │   ├── 789465116.png
-      ├── 13656456.txt
+  │   ├── 789465116.txt
   │   └── ...
   └── splits
       ├── train.txt  
