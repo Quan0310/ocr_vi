@@ -23,8 +23,8 @@ Dự án này nhằm xây dựng một hệ thống nhận dạng chữ viết t
   │   ├── 789465116.txt
   │   └── ...
   └── splits
-      ├── train.txt  
-      └── val.txt
+      ├── train.txt
+        └── val.txt
   ```
 ## 🔧 Cài đặt
 
