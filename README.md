@@ -37,6 +37,7 @@ python test.py --i --image_path [image_path]
 ![test1](https://github.com/user-attachments/assets/7c4ef906-a92a-467d-a02e-a2381e0921b5) 
 ### Kết quả
 <img width="701" height="203" alt="image" src="https://github.com/user-attachments/assets/98f4b7ae-18f1-4cff-ad25-fb6097123d67" />
+
 ### Thử nghiệm với ảnh 2
 ![test2](https://github.com/user-attachments/assets/834fd0bb-9dd2-44dd-a046-dac069719573)
 ### Kết quả
