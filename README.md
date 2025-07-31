@@ -23,3 +23,5 @@ python train.py --epochs 50 --batch_size 16
 
 ## 📊 Biểu đồ hàm mất mát 
 <img width="654" height="360" alt="image" src="https://github.com/user-attachments/assets/ec23956f-4732-423a-aa63-a7382a31f9cb" />
+
+## 🧪 Thử nghiệm
