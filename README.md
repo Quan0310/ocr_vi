@@ -11,8 +11,21 @@ Dự án này nhằm xây dựng một hệ thống nhận dạng chữ viết t
 - Tự động tiền xử lý ảnh viết tay (crop, resize, padding,...)
 
 ## Dataset
-- Tập dữ liệu được tải ở đường link [ở đây](https://drive.google.com/file/d/1-hAGX91o45NA4nv1XUYw5pMw4jMmhsh5/view)
-
+- Tập dữ liệu được tải [ở đây](https://drive.google.com/file/d/1-hAGX91o45NA4nv1XUYw5pMw4jMmhsh5/view)
+- Thư mục chứa dữ liệu chữ viết tay tiếng Việt là "InkData_line_processed"
+- Cấu trúc thư mục dữ liệu như sau:
+    ```
+  data
+  ├── lines
+  │   ├── 13656456.png  
+  │   ├── 13656456.txt
+  │   ├── 789465116.png
+      ├── 13656456.txt
+  │   └── ...
+  └── splits
+      ├── train.txt  
+      └── val.txt
+  ```
 ## 🔧 Cài đặt
 
 ```bash
